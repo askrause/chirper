@@ -1,0 +1,13 @@
+<div class="container"> 
+<h1>Chirp</h1>
+<p><%= @chirp.body %></p>
+<%= image_tag @chirp.pic.url, width: '100' %>
+<p>
+  -<i><%= @chirp.author %></i>
+</p>
+<%= link_to "Edit this Chirp", edit_chirp_path(@chirp) %>
+<br>
+<%= link_to "Delete this Chirp", chirp_path(@chirp), method: 'delete' %>
+<br>
+<%= link_to "See All Chirps", chirps_path %>
+</div>
